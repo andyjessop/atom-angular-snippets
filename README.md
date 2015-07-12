@@ -1,5 +1,5 @@
 # atom-angular-snippets
-A collection of Angular JS snippets for Atom, following Todd Motto's styleguide
+A collection of Angular JS snippets for Atom, following [Todd Motto's styleguide](https://github.com/toddmotto/angularjs-styleguide).
 
 To use, just copy and paste your snippet of choice into your snippets.cson file in atom:
 
