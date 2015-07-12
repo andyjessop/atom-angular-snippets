@@ -1,0 +1,41 @@
+
+
+'.source.js':
+
+  'angular-module':
+    'prefix': 'ng-mod'
+    'body': '(function(){\n\n\t\'use strict\';\n\n\tangular\n\t\t.module(\'app\');\n\n})();'
+    
+    # Produces:
+    # (function(){
+    #
+    #     'use strict';
+    #
+    #     angular
+    #         .module('app');
+    #
+    # })();
+
+
+  'angular-controller':
+    'prefix': 'ng-ctrl'
+    'body': '(function(){\n\n\t\'use strict\';\n\n\tangular\n\t\t.module(\'app\')\n\t\t.controller(\'AppController\', AppController);\n\n\t\tAppController.$inject = [];\n\n\t\tfunction\sAppController(){\n\n\t\t\tvar vm = this;\n\n\t\t}\n\n})();'
+
+    # Produces:
+    #	(function(){
+	  #
+	  #	'use strict';
+	  #
+	  #	angular
+	  #		.module('app')
+	  #		.controller('AppController', AppController);
+	  #
+	  #		AppController.$inject = [];
+	  #
+	  #		functionsAppController(){
+	  #
+	  #			var vm = this;
+	  #
+	  #		}
+	  #
+	  # })();
