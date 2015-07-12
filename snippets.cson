@@ -1,35 +1,61 @@
 '.source.js':
-  'angular-controller':
-    'prefix': 'ng-ctrl'
-    'body': """
-        (function(){
+    'angular-controller':
+        'prefix': 'ng-ctrl'
+        'body': """
+            (function(){
 
-            'use strict';
+                'use strict';
 
-            angular
-                .module('app')
-                .controller('AppController', AppController);
+                angular
+                    .module('$1')
+                    .controller('${2:MyController}', $2);
 
-            AppController.$inject = [];
+                    $2.$inject = [];
 
-            function AppController() {
+                    function $2() {
 
-                vm = this;
+                        vm = this;
 
-            }
+                    }
 
-        })();
-    """
-    
-  'angular-module':
-    'prefix': 'ng-mod'
-    'body': """
-        (function(){
+            })();
+        """
 
-            'use strict';
+    'angular-module':
+        'prefix': 'ng-mod'
+        'body': """
+            (function(){
 
-            angular
-                .module('app');
+                'use strict';
 
-        })();
-    """
+                angular
+                    .module('$1');
+
+            })();
+        """
+
+    'angular-filter':
+        'prefix': 'ng-fil'
+        'body': """
+            (function(){
+
+                'use strict';
+
+                angular
+                    .module('app')
+                    .filter('${1:myFilter}', $1);
+
+                function $1() {
+
+                    return function(items) {
+
+                        return items.filter(function(item) {
+                            return item;
+                        });
+
+                    };
+                }
+
+            })();
+        """
+
