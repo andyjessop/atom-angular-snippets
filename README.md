@@ -37,3 +37,23 @@ Angular Module
 			}
 
 	})();
+
+`ng-fil[tab]` produces:
+
+	(function(){
+
+		'use strict';
+
+		angular
+			.module('app')
+			.filter('myFilter', myFilter);
+
+			function myFilter(){
+
+				return items.filter(function(item) {
+	                		return item;
+	                        });
+	                        
+			}
+			
+	})();
