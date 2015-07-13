@@ -30,7 +30,7 @@ Angular Module
 
 			AppController.$inject = [];
 
-			functionsAppController(){
+			function AppController(){
 
 				var vm = this;
 
