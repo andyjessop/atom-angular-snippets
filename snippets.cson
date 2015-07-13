@@ -59,3 +59,23 @@
             })();
         """
 
+
+    'angular-directive':
+        'prefix': 'ng-dir'
+        'body': """
+            (function(){
+
+                'use strict';
+
+                angular
+                    .module('app')
+                    .directive('${1:myDirective}', $1);
+
+                $1.$inject = [];
+
+                function $1() {
+
+                }
+
+            })();
+        """
