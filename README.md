@@ -70,8 +70,15 @@ Angular Module
 
         myDirective.$inject = [];
 
-        function myDirective() {
+        function $1() {
+                    return {
+                        restrict: '',
+                        templateUrl: '',
+                        scope: {},
+                        controller: function($scope, $element, $attrs){
 
-        }
+                        }
+                    }
+                }
 
     })();
