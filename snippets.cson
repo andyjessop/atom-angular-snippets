@@ -74,7 +74,13 @@
                 $1.$inject = [];
 
                 function $1() {
+                    return {
+                        restrict: '',
+                        templateUrl: '',
+                        controller: function($scope, $element, $attrs){
 
+                        }
+                    }
                 }
 
             })();
