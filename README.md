@@ -57,3 +57,21 @@ Angular Module
 			}
 			
 	})();
+
+`ng-dir[tab]` produces:
+
+    (function(){
+
+        'use strict';
+
+        angular
+            .module('app')
+            .directive('myDirective', myDirective);
+
+        myDirective.$inject = [];
+
+        function myDirective() {
+
+        }
+
+    })();
